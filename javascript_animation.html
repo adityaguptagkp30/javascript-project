@@ -1,0 +1,163 @@
+    <!DOCTYPE html>
+    <html>
+    <style>
+    #container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: green;
+    }
+    #animate1 {
+      width: 50px;
+      height: 20px;
+      position: absolute;
+      background-color: red;
+    }
+        #animate2 {
+      width: 20px;
+      height: 50px;
+      position: absolute;
+      background-color: blue;
+
+
+    }
+        #animate3 {
+      width: 50px;
+      height: 20px;
+      position: absolute;
+      background-color: red;
+    }
+
+    #animate4{
+      width: 20px;
+      height: 50px;
+      position: absolute;
+      background-color: yellow;
+    }
+         #animate5 {
+      width: 20px;
+      height: 100px;
+      position: absolute;
+      background-color: pink;
+
+
+    }
+        #animate6 {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background-color: pink;
+
+
+    }
+
+
+    </style>
+    <body>
+
+    <p>
+    <button onclick="myMove()">Click Me</button>
+    </p> 
+
+    <div id ="container">
+    <div id ="animate1"></div>
+        <div id ="animate2"></div>
+        <div id ="animate3"></div>
+        <div id ="animate4"></div>
+        <div id ="animate5"></div>
+
+    </div>
+
+    <script>
+        function myMove() {
+            myMove1();
+            myMove2();
+            myMove3();
+             myMove4();
+            myMove5();
+
+        }
+    function myMove1() {
+      var elem = document.getElementById("animate1");   
+      var pos = 0;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (pos == 150) {
+          clearInterval(id);
+        } else {
+          pos++; 
+          elem.style.top = pos + 'px'; 
+          elem.style.left = pos + 'px'; 
+        }
+      }
+    }
+        function myMove2() {
+      var elem = document.getElementById("animate2");   
+      var posx = 350;var posy =0;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (posx == 150) {
+          clearInterval(id);
+        } else {
+         --posx; posy++; 
+          elem.style.top = posy + 'px'; 
+          elem.style.left = posx + 'px'; 
+        }
+      }
+    }
+        function myMove3() {
+      var elem = document.getElementById("animate3");   
+      var posx = 0,posy = 0;;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (posx == 150) {
+
+            clearInterval(id);
+
+
+        } else {
+          posx=posx+.5;posy=posy=posy+1; 
+          elem.style.top = posy + 'px'; 
+          elem.style.left = posx + 'px'; 
+        }
+      }
+    }
+      function myMove4() {
+      var elem = document.getElementById("animate4");   
+      var posx = 400;var posy =50;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (posx == 200) {
+          clearInterval(id);
+
+
+        } else {
+         --posx; posy++; 
+          elem.style.top = posy + 'px'; 
+          elem.style.left = posx + 'px'; 
+        }
+      }
+    }
+         function myMove5() {
+      var elem = document.getElementById("animate5");   
+      var posx = 400;var posy =60;
+      var id = setInterval(frame, 5);
+      function frame() {
+        if (posx == 250) {
+          clearInterval(id);
+
+
+        } else {
+         --posx; posy++; 
+          elem.style.top = posy + 'px'; 
+          elem.style.left = posx + 'px'; 
+        }
+      }
+    }
+
+
+
+    </script>
+
+    </body>
+    </html>
